@@ -30,7 +30,7 @@ setup_requirements = ['pytest-runner'] if {'pytest', 'test', 'ptr'}.intersection
 install_requirements = ['guessit>=3.0.0', 'babelfish>=0.5.2', 'enzyme>=0.4.1', 'beautifulsoup4>=4.4.0',
                         'requests>=2.0', 'click>=4.0', 'dogpile.cache>=0.6.0', 'stevedore>=1.20.0',
                         'chardet>=2.3.0', 'pysrt>=1.0.1', 'six>=1.9.0', 'appdirs>=1.3', 'rarfile>=2.7',
-                        'pytz>=2012c']
+                        'pytz>=2012c', 'charset-normalizer', 'ffmpeg-python']
 if sys.version_info < (3, 2):
     install_requirements.append('futures>=3.0')
 
@@ -76,7 +76,8 @@ setup(name='subliminal',
               'podnapisi = subliminal.providers.podnapisi:PodnapisiProvider',
               'shooter = subliminal.providers.shooter:ShooterProvider',
               'thesubdb = subliminal.providers.thesubdb:TheSubDBProvider',
-              'tvsubtitles = subliminal.providers.tvsubtitles:TVsubtitlesProvider'
+              'tvsubtitles = subliminal.providers.tvsubtitles:TVsubtitlesProvider',
+              'napiprojekt = subliminal.providers.napiprojekt:NapiProjektProvider'
           ],
           'subliminal.refiners': [
               'hash = subliminal.refiners.hash:refine',
